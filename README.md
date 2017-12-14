@@ -10,7 +10,7 @@ Setup FB page and app:
 + Generate a Token for the Facebook Page with which you want to integrate (this is the PAGE_ACCESS_TOKEN)
 
 Setup the FB webhook:
-+ give it the Callback URL (the one you will get from heroku)
++ give it the Callback URL (the one you will get when you create the heroku app)
 + enter the Verify Token (this is the VERIFY_TOKEN)
 + check all the Subscription Fields -> verify and save
 + subscribe webhook to the page events on your FB Page
@@ -30,4 +30,20 @@ Setup your project:
 Test the app locally:
 + flask run
 + http://127.0.0.1:5000/ should give you *Hello world*
+
+Setup heroku and git:
++ install heroku-cli
++ git add .
++ git commit -m "My initial commit"
+
+Deploy to heroku:
++ create a heroku app *heroku create* 
+    + this is the URL you will use for the webhook callback
++ heroku git:remote -a name-of-the-heroku-app-from-the-previous-step
++ git push heroku master
+
+Test the FB chatbot:
++ send a message from your FB account to the FB Page and it should echo it back
++ you can see the message in the heroku app log
++ tada
 
