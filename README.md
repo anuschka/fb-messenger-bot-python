@@ -46,4 +46,4 @@ Test the FB chatbot:
 + send a message from your FB account to the FB Page and it should echo it back
 + you can see the message in the heroku app log
 + tada
-
++ tada
