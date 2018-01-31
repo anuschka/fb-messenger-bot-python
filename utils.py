@@ -1,3 +1,4 @@
+import os, sys
 from wit import Wit
 
 access_token = os.environ["WIT_ACCESS_TOKEN"]
