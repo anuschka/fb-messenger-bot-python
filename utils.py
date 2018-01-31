@@ -16,4 +16,4 @@ def wit_response(message_text):
     return (entity,value)
 
 
-print(wit_response('I want sport news'))
+#print(wit_response('I want sport news'))

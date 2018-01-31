@@ -42,7 +42,7 @@ def webhook():
 					#response = messaging_text
 					#bot.send_text_message(sender_id, response)
 					response = None
-					entity, value = wit_response(message_text)
+					entity, value = wit_response(messaging_text)
 					
 					if entity == 'newstype':
 						response = "OK. I wioll send you {} news".format(str(value))
