@@ -14,3 +14,4 @@ six==1.11.0
 urllib3==1.22
 Werkzeug==0.13
 wit==4.3.0
+gnewsclient==1.1.0
