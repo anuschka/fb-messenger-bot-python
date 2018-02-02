@@ -2,6 +2,7 @@ import os, sys
 from flask import Flask, request
 from utils import wit_response, get_news_elements
 from pymessenger import Bot
+import requests,json
 
 app = Flask(__name__)
 
