@@ -68,7 +68,7 @@ def set_greeting_text():
 			"text":"Hi {{user_first_name}}! I am a news bot"
 			}
 		}
-	ENDPOINT = "https://graph.facebook.com/v2.8/me/thread_settings?access_token=%s"%(PAGE_ACCESS_TOKEN)
+	ENDPOINT = "https://graph.facebook.com/v2.8/me/thread_settings?access_token=%s"%("PAGE_ACCESS_TOKEN")
 	r = requests.post(ENDPOINT, headers = headers, data = json.dumps(data))
 	print(r.content)
 
