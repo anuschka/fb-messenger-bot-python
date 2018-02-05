@@ -122,14 +122,14 @@ def send_generic_message(recipient_id):
                 "payload": {
                     "template_type": "generic",
                     "elements": [{
-                        "title": "rift",
-                        "subtitle": "Next-generation virtual reality",
-                        "item_url": "https://www.oculus.com/en-us/rift/",               
-                        "image_url": "http://messengerdemo.parseapp.com/img/rift.png",
+                        "title": "Asylex",
+                        "subtitle": "free online legal aid on Swiss asylum law",
+                        "item_url": "https://asylex.ch/",               
+                        "image_url": "https://asylex.ch/assets/logo/asylexO.png",
                         "buttons": [{
                             "type": "web_url",
-                            "url": "https://www.oculus.com/en-us/rift/",
-                            "title": "Open Web URL"
+                            "url": "https://asylex.ch/docs/faq_en.pdf",
+                            "title": "Open FAQ"
                         }, {
                             "type": "postback",
                             "title": "Call Postback",
@@ -331,7 +331,7 @@ def received_postback(event):
         send_text_message(sender_id, "Welcome to the Asylex bot - Postback was called")
     else:
         # Notify sender that postback was successful
-        send_text_message(sender_id, "Welcome to the Asylex bot - Postback was called")
+        send_text_message(sender_id, "Welcome to the Asylex bot - Anything you type will be echoed back to you, except for some keywords.")
 
 
 def call_send_api(message_data):
