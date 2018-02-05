@@ -260,7 +260,7 @@ def send_button_message(recipient_id):
                     {
                         "type":"web_url",
                         "url":"https://asylex.ch",
-                        "title":"Visit Asylex website"
+                        "title":"Asylex website"
                     },
                     {
                         "type":"postback",
@@ -328,10 +328,10 @@ def received_postback(event):
         # Get Started button was pressed
         send_text_message(sender_id, "Welcome to SoCal Echo Bot! Anything you type will be echoed back to you, except for some keywords.")
     elif payload == 'Payload for send_button_message()':
-		send_text_message(sender_id, "Welcome to Asylex Bot! Anything you type will be echoed back to you, except for keywords:image, text, video, ...")
-	else:
+        pass
+    else:
         # Notify sender that postback was successful
-        send_text_message(sender_id, "Postback called")
+        send_text_message(sender_id, "Welcome to the Asylex bot - Postback was called")
 
 
 def call_send_api(message_data):
