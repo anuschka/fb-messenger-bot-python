@@ -170,7 +170,7 @@ def send_image_message(recipient_id):
             "attachment": {
                 "type":"image",
                 "payload":{
-                    "url":"http://i.imgur.com/76rJlO9.jpg"
+                    "url":"https://www.caritas.ch/fileadmin/_processed_/4/c/csm_caritas_news_yc-award_171127_31fa868713.jpg"
                 }
             }
         }
