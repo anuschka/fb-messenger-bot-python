@@ -69,7 +69,7 @@ def received_message(event):
         elif message_text == 'file' or message_text == 'File':
             send_file_message(sender_id)
 
-        elif message_text == 'audio' or message_text == 'audio':
+        elif message_text == 'audio' or message_text == 'Audio':
             send_audio_message(sender_id)
 
         elif message_text == 'video' or message_text == 'Video':
