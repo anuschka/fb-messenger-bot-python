@@ -66,7 +66,7 @@ def received_message(event):
         if message_text == 'image' or message_text == 'Image':
             send_image_message(sender_id)
 
-        elif message_text == 'file':
+        elif message_text == 'file' or message_text == 'File':
             send_file_message(sender_id)
 
         elif message_text == 'audio':
@@ -191,7 +191,7 @@ def send_file_message(recipient_id):
             "attachment": {
                 "type":"file",
                 "payload":{
-                    "url":"http://ee.usc.edu/~redekopp/ee355/EE355_Syllabus.pdf"
+                    "url":"https://asylex.ch/docs/asylverfahren_en.pdf"
                 }
             }
         }
