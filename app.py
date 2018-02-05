@@ -63,7 +63,7 @@ def received_message(event):
         message_text = event["message"]["text"]
 
         # parse message_text and give appropriate response   
-        if message_text == 'image':
+        if message_text == 'image' or message_text == 'Image':
             send_image_message(sender_id)
 
         elif message_text == 'file':
