@@ -260,7 +260,7 @@ def send_button_message(recipient_id):
                     {
                         "type":"web_url",
                         "url":"https://asylex.ch",
-                        "title":"Asylex website"
+                        "title":"Visit Asylex website"
                     },
                     {
                         "type":"postback",
