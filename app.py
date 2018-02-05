@@ -75,7 +75,7 @@ def received_message(event):
         elif message_text == 'video' or message_text == 'Video':
             send_video_message(sender_id)
 
-        elif message_text == 'button':
+        elif message_text == 'button' or message_text == 'Button':
             send_button_message(sender_id)
 
         elif message_text == 'generic':
@@ -259,8 +259,8 @@ def send_button_message(recipient_id):
                     "buttons":[
                     {
                         "type":"web_url",
-                        "url":"https://www.google.com",
-                        "title":"Google"
+                        "url":"https://asylex.ch",
+                        "title":"Asylex website"
                     },
                     {
                         "type":"postback",
