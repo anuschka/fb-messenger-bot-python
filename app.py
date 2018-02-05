@@ -74,11 +74,36 @@ def set_greeting_text():
 	r = requests.post(ENDPOINT, headers = headers, data = json.dumps(data))
 	print(r.content)
 
+def set_persistent_menu():
+	headers = {
+		'Content-Type':'application/json'
+		}
+	data = {
+		"setting_type":"call_to_actions",
+		"thread_state" : "existing_thread",
+		"call_to_actions":[
+			{
+				"type":"web_url",
+				"title":"Meet Asylex",
+				"url":"https://asylex.ch" 
+			},
+			{
+				"type":"postback",
+				"title":"Help",
+				"payload":"SHOW_HELP"
+			}]
+		}
+	ENDPOINT = "https://graph.facebook.com/v2.8/me/thread_settings?access_token=%s"%(PAGE_ACCESS_TOKEN)
+	r = requests.post(ENDPOINT, headers = headers, data = json.dumps(data))
+	print(r.content)
+
+
 
 def log(message):
 	print(message)
 	sys.stdout.flush()
 
+set_persistent_menu()
 set_greeting_text()
 
 if __name__ == "__main__":
