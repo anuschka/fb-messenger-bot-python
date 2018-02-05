@@ -57,6 +57,12 @@ def webhook():
 					categories = wit_response(messaging_text)
 					elements = get_news_elements(categories)
 					bot.send_generic_message(sender_id, elements)
+				
+				elif messaging_event.get('postback'):
+					# HANDLE POSTBACKS HERE
+					payload = messaging_event['postback']['payload']
+					if payload ==  'SHOW_HELP':
+						bot.send_quickreply(sender_id, HELP_MSG, news_categories)
 
 	return "ok", 200
 

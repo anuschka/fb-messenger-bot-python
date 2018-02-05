@@ -6,6 +6,19 @@ access_token = os.environ["WIT_ACCESS_TOKEN"]
  
 client = Wit(access_token = access_token)
 
+# available news categories
+news_categories = [('sports', 'sports news'), ('political', 'political news'), ('business', 'business news'), 
+				   ('top stories', 'top stories news'), ('world', 'world news'), ('national', 'national news'), 
+					('technology', 'technology news'), ('entertainment', 'entertainment news')]
+
+# a help message
+HELP_MSG = """
+Hey! I am NewsBot. 
+I can provide you news from all around the world in different languages, on different topics! 
+Try any of these categories. :)
+"""
+
+
 def wit_response(message_text):
     resp = client.message(message_text)
     # entity = None
