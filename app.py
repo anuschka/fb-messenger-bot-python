@@ -69,7 +69,7 @@ def received_message(event):
         elif message_text == 'file' or message_text == 'File':
             send_file_message(sender_id)
 
-        elif message_text == 'audio':
+        elif message_text == 'audio' or message_text == 'Audio':
             send_audio_message(sender_id)
 
         elif message_text == 'video':
@@ -212,7 +212,7 @@ def send_audio_message(recipient_id):
             "attachment": {
                 "type":"audio",
                 "payload":{
-                    "url":"http://www.stephaniequinn.com/Music/Allegro%20from%20Duet%20in%20C%20Major.mp3"
+                    "url":"http://vochabular.ch/downloads/Audio/Kapitel2/3_Kapitel2_UebungAe_D/1.mp3"
                 }
             }
         }
