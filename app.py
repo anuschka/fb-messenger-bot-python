@@ -349,7 +349,7 @@ def call_send_api(message_data):
 
 def log(message):  # simple wrapper for logging to stdout on heroku
     print(message)
-	sys.stdout.flush()
+	# sys.stdout.flush()
 
 # import os, sys
 # from flask import Flask, request
