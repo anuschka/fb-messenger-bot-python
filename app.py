@@ -33,32 +33,32 @@ def webhook():
 				sender_id = messaging_event['sender']['id']
 				recipient_id = messaging_event['recipient']['id']
 
-				if messaging_event.get('message'):
-					# Extracting text message
-					if 'text' in messaging_event['message']:
-						messaging_text = messaging_event['message']['text']
-					else:
-						messaging_text = 'no text'
+				# if messaging_event.get('message'):
+				# 	# Extracting text message
+				# 	if 'text' in messaging_event['message']:
+				# 		messaging_text = messaging_event['message']['text']
+				# 	else:
+				# 		messaging_text = 'no text'
 
-					# Echo
-					#response = messaging_text
+				# 	# Echo
+				# 	#response = messaging_text
 					
-					# response = None
-					# entity, value = wit_response(messaging_text)
+				# 	# response = None
+				# 	# entity, value = wit_response(messaging_text)
 					
-					# if entity == 'newstype':
-					# 	response = "OK. I will send you {} news".format(str(value))
-					# elif entity == 'location':
-					# 	response = "OK. So, you live in {0}. I will send you top headlines from {0}".format(str(value))
+				# 	# if entity == 'newstype':
+				# 	# 	response = "OK. I will send you {} news".format(str(value))
+				# 	# elif entity == 'location':
+				# 	# 	response = "OK. So, you live in {0}. I will send you top headlines from {0}".format(str(value))
 					
-					# if response == None:
-					# 	response = "Sorry, I didn't understand"
+				# 	# if response == None:
+				# 	# 	response = "Sorry, I didn't understand"
 
-					categories = wit_response(messaging_text)
-					elements = get_news_elements(categories)
-					bot.send_generic_message(sender_id, elements)
+				# 	categories = wit_response(messaging_text)
+				# 	elements = get_news_elements(categories)
+				# 	bot.send_generic_message(sender_id, elements)
 				
-				elif messaging_event.get('postback'):
+				if messaging_event.get('postback'):
 					# HANDLE POSTBACKS HERE
 					payload = messaging_event['postback']['payload']
 					if payload ==  'SHOW_HELP':
