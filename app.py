@@ -294,7 +294,7 @@ def send_share_message(recipient_id):
                     {
                         "title":"Asylex link",
                         "subtitle":"free online legal aid on Swiss asylum law",
-                        "image_url":"https://asylex.ch/assets/logo/asylexO.png",
+                        "image_url":"https://media-exp2.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAr8AAAAJDYyNGU1NWM4LTA4NzYtNGU4Yy1hNmY5LTA3MDAzOWRhZWFkNQ.png",
                         "buttons":[
                         {
                             "type":"element_share"
