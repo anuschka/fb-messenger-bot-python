@@ -331,7 +331,7 @@ def received_postback(event):
         send_text_message(sender_id, "Welcome to the Asylex bot - Postback was called")
     else:
         # Notify sender that postback was successful
-        send_text_message(sender_id, "Welcome to the Asylex bot - Anything you type will be echoed back to you, except for some keywords.")
+        send_text_message(sender_id, "Welcome to the Asylex bot - Anything you type will be echoed back to you, except for the following keywords: image, file, audio, video, button, generic, share.")
 
 
 def call_send_api(message_data):
@@ -350,7 +350,7 @@ def call_send_api(message_data):
 
 
 def log(message):  # simple wrapper for logging to stdout on heroku
-    print(message)
+    print str(message)
     sys.stdout.flush()
 
 # import os, sys
