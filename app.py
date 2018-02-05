@@ -78,10 +78,10 @@ def received_message(event):
         elif message_text == 'button' or message_text == 'Button':
             send_button_message(sender_id)
 
-        elif message_text == 'generic':
+        elif message_text == 'generic' or message_text == 'Generic':
             send_generic_message(sender_id)
 
-        elif message_text == 'share':
+        elif message_text == 'share' or message_text == 'Share':
             send_share_message(sender_id)
 
         else: # default case
@@ -292,9 +292,9 @@ def send_share_message(recipient_id):
                     "template_type":"generic",
                     "elements":[
                     {
-                        "title":"Reddit link",
-                        "subtitle":"Something funny or interesting",
-                        "image_url":"https://pbs.twimg.com/profile_images/667516091330002944/wOaS8FKS.png",
+                        "title":"Asylex link",
+                        "subtitle":"free online legal aid on Swiss asylum law",
+                        "image_url":"https://asylex.ch/assets/logo/asylexO.png",
                         "buttons":[
                         {
                             "type":"element_share"
