@@ -2,10 +2,12 @@ import os, sys
 from flask import Flask, request
 from utils import wit_response, get_news_elements
 from pymessenger import Bot
+import requests,json
 
 app = Flask(__name__)
 
 bot = Bot(os.environ["PAGE_ACCESS_TOKEN"])
+PAGE_ACCESS_TOKEN = os.environ.get('PAGE_ACCESS_TOKEN')
 
 
 @app.route('/', methods=['GET'])
@@ -58,11 +60,26 @@ def webhook():
 
 	return "ok", 200
 
+def set_greeting_text():
+	headers = {
+		'Content-Type':'application/json'
+		}
+	data = {
+		"setting_type":"greeting",
+		"greeting":{
+			"text":"Hi {{user_first_name}}! I am news bot"
+			}
+		}
+	ENDPOINT = "https://graph.facebook.com/v2.8/me/thread_settings?access_token=%s"%(PAGE_ACCESS_TOKEN)
+	r = requests.post(ENDPOINT, headers = headers, data = json.dumps(data))
+	print(r.content)
+
 
 def log(message):
 	print(message)
 	sys.stdout.flush()
 
+set_greeting_text()
 
 if __name__ == "__main__":
     app.run(debug = True)
