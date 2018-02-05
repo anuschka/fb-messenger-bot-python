@@ -125,7 +125,7 @@ def send_generic_message(recipient_id):
                         "title": "Asylex",
                         "subtitle": "free online legal aid on Swiss asylum law",
                         "item_url": "https://asylex.ch/",               
-                        "image_url": "https://asylex.ch/assets/logo/asylexO.png",
+                        "image_url": "https://media-exp2.licdn.com/mpr/mpr/shrink_200_200/AAEAAQAAAAAAAAr8AAAAJDYyNGU1NWM4LTA4NzYtNGU4Yy1hNmY5LTA3MDAzOWRhZWFkNQ.png",
                         "buttons": [{
                             "type": "web_url",
                             "url": "https://asylex.ch/docs/faq_en.pdf",
@@ -136,14 +136,14 @@ def send_generic_message(recipient_id):
                             "payload": "Payload for first bubble",
                         }],
                     }, {
-                        "title": "touch",
-                        "subtitle": "Your Hands, Now in VR",
-                        "item_url": "https://www.oculus.com/en-us/touch/",               
-                        "image_url": "http://messengerdemo.parseapp.com/img/touch.png",
+                        "title": "Google",
+                        "subtitle": "Find all your answers",
+                        "item_url": "https://www.google.com/",               
+                        "image_url": "https://www.google.ch/images/branding/googlelogo/1x/googlelogo_color_272x92dp.png",
                         "buttons": [{
                             "type": "web_url",
-                            "url": "https://www.oculus.com/en-us/touch/",
-                            "title": "Open Web URL"
+                            "url": "https://www.google.ch/",
+                            "title": "Google Suche"
                         }, {
                             "type": "postback",
                             "title": "Call Postback",
